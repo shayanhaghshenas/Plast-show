@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071d49">
+<title>PLAST SHOW | دعوت‌نامه بازدید</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--navy:#071d49;--blue:#0d3b80;--green:#20b66b;--mint:#dff8eb;--ink:#14264a;--muted:#70809c;--line:#dce5f2;--paper:#fff;--bg:#f4f8fd}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Vazirmatn',Tahoma,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%,#dff7ed 0,transparent 27%),radial-gradient(circle at 90% 5%,#dceaff 0,transparent 30%),var(--bg);min-height:100vh}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;max-width:1120px;margin:auto;padding:0 24px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.5px;color:var(--navy);font-size:22px;direction:ltr}
+.mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#27c978,#0b3b82);position:relative;box-shadow:0 8px 20px #0b3b8226}
+.mark:before,.mark:after{content:"";position:absolute;border:3px solid white;border-right-color:transparent;border-bottom-color:transparent;border-radius:50%;transform:rotate(-35deg)}
+.mark:before{inset:9px 6px 7px 10px}.mark:after{inset:14px 11px 12px 15px}
+.top-tag{font-size:12px;color:#536787;background:#ffffffb8;border:1px solid #e3ebf6;border-radius:30px;padding:9px 14px}
+.shell{max-width:1120px;margin:10px auto 42px;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(115deg,#071d49 0%,#0b3472 63%,#0b4d82 100%);min-height:230px;color:white;padding:34px 42px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 20px 50px #0b2c5e21}
+.hero:before{content:"";position:absolute;width:330px;height:330px;border:1px solid #ffffff17;border-radius:50%;left:-80px;top:-150px;box-shadow:0 0 0 30px #ffffff08,0 0 0 65px #ffffff06}
+.hero:after{content:"";position:absolute;width:220px;height:220px;background:#20b66b17;border-radius:50%;left:22%;bottom:-170px;filter:blur(2px)}
+.hero-copy{position:relative;z-index:1;max-width:650px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#aaf0ca;font-size:12px;font-weight:700;letter-spacing:.5px}
+.dot{width:7px;height:7px;background:#37dc87;border-radius:50%;box-shadow:0 0 0 5px #37dc8725}
+.hero h1{font-size:clamp(27px,4vw,43px);line-height:1.45;margin:12px 0 8px;font-weight:900}
+.hero h1 span{color:#46df91}
+.hero p{margin:0;color:#d4e1f5;line-height:2;font-size:14px;max-width:570px}
+.hero-art{width:210px;height:160px;flex:0 0 210px;position:relative;z-index:1;margin-right:25px}
+.orbit{position:absolute;border:1px solid #ffffff35;border-radius:50%;inset:5px 10px;transform:rotate(-28deg)}
+.orbit.two{inset:25px -2px;transform:rotate(30deg)}
+.cube{position:absolute;width:80px;height:80px;left:64px;top:35px;background:linear-gradient(145deg,#2de08a,#0b8b67);border:1px solid #ffffff65;transform:rotate(30deg) skew(-8deg,-8deg);border-radius:14px;box-shadow:0 20px 35px #00122e55;animation:float 4s ease-in-out infinite}
+.cube:before{content:"";position:absolute;inset:14px;border:2px solid #ffffffa6;border-radius:8px}
+.spark{position:absolute;width:12px;height:12px;border-radius:4px;background:#e3fff0;box-shadow:0 0 22px #7cffb6;animation:float 3s ease-in-out infinite}
+.s1{top:22px;left:35px}.s2{bottom:23px;right:22px;animation-delay:.8s}.s3{top:55px;right:5px;width:7px;height:7px;animation-delay:1.3s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(30deg)}50%{transform:translateY(-9px) rotate(34deg)}}
+.main-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.75fr);gap:22px;margin-top:22px;align-items:start}
+.form-card,.side-card{background:#ffffffed;border:1px solid #e4ebf5;border-radius:24px;box-shadow:0 12px 36px #143b7010}
+.form-card{padding:28px;min-height:480px}
+.progress-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:13px}
+.progress-label{font-size:12px;color:var(--muted);font-weight:700}
+.step-count{font-size:12px;color:var(--blue);font-weight:800;background:#eaf2ff;padding:7px 11px;border-radius:20px}
+.progress{height:6px;background:#edf1f7;border-radius:20px;overflow:hidden;margin-bottom:28px}
+.progress-bar{height:100%;width:20%;border-radius:20px;background:linear-gradient(90deg,var(--green),#60d99a);transition:width .45s ease}
+.slide{display:none;animation:enter .42s cubic-bezier(.2,.8,.2,1)}
+.slide.active{display:block}
+@keyframes enter{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:translateX(0)}}
+.slide h2{font-size:23px;margin:0 0 8px;color:var(--navy);font-weight:900}
+.subtitle{margin:0 0 24px;color:var(--muted);font-size:13px;line-height:1.9}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+label,.question-label{font-size:13px;font-weight:700;color:#314568}
+input,select{width:100%;border:1px solid var(--line);border-radius:13px;background:#fbfdff;padding:13px 14px;color:var(--ink);outline:none;transition:.2s}
+input:focus,select:focus{border-color:#4b9ce8;box-shadow:0 0 0 4px #4b9ce81c;background:white}
+input::placeholder{color:#a4b0c2}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.option{position:relative}
+.option input{position:absolute;opacity:0;pointer-events:none}
+.option label{display:flex;align-items:center;gap:10px;min-height:53px;padding:12px;border:1px solid var(--line);border-radius:13px;background:#fbfdff;cursor:pointer;font-weight:500;line-height:1.6;transition:.2s}
+.option label:before{content:"";width:16px;height:16px;flex:0 0 16px;border:1.5px solid #b7c5d8;border-radius:50%;background:white}
+.option input:checked+label{border-color:#28b873;background:#f0fff7;color:#126a42;box-shadow:0 0 0 2px #28b87316}
+.option input:checked+label:before{border:5px solid #20b66b}
+.question{margin:0 0 23px}
+.question:last-child{margin-bottom:0}
+.note{font-size:11px;color:#8592a8;line-height:1.9;margin-top:16px}
+.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #edf1f7;margin-top:27px;padding-top:21px}
+.btn{border:0;border-radius:13px;padding:13px 22px;font-weight:800;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{color:white;background:linear-gradient(110deg,#1ab96b,#15985d);box-shadow:0 9px 20px #1ab96b2e}
+.btn-ghost{background:#f0f4fa;color:#536582}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.side-card{padding:23px;position:sticky;top:20px}
+.side-title{font-size:16px;font-weight:900;color:var(--navy);margin:0 0 16px}
+.info-row{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #edf1f7}
+.info-row:last-of-type{border-bottom:0}
+.icon{width:38px;height:38px;display:grid;place-items:center;flex:0 0 38px;border-radius:12px;background:#eaf8f0;color:#119a59;font-size:19px}
+.info-row strong{display:block;font-size:13px;margin:1px 0 5px}
+.info-row span{font-size:11px;color:var(--muted);line-height:1.8}
+.side-banner{margin-top:17px;background:linear-gradient(135deg,#eefaf3,#eef5ff);border-radius:16px;padding:16px;font-size:12px;line-height:2;color:#3b587c}
+.side-banner b{color:#087c49}
+.footer{text-align:center;color:#8290a8;font-size:11px;line-height:2;padding:24px 10px 0}
+.success{display:none;text-align:center;padding:25px 10px 10px;animation:enter .5s ease}
+.success.show{display:block}
+.success-icon{width:76px;height:76px;border-radius:24px;margin:0 auto 18px;background:linear-gradient(135deg,#dff9e9,#b9f0d0);display:grid;place-items:center;color:#129354;font-size:36px;box-shadow:0 10px 25px #18b76a22}
+.success h2{font-size:27px;color:var(--navy);margin:0 0 10px}
+.success p{color:var(--muted);font-size:13px;line-height:2}
+.tracking{direction:ltr;letter-spacing:2px;font-size:25px;font-weight:900;color:#0a7b49;background:#effcf4;border:1px dashed #6cc99a;border-radius:15px;padding:16px;margin:20px auto;max-width:320px}
+.warning{font-size:11px!important;background:#fff8e8;color:#85601d!important;border-radius:12px;padding:11px 13px}
+@media(max-width:820px){.hero{padding:28px;min-height:215px}.hero-art{width:145px;flex-basis:145px;margin-right:0;transform:scale(.8)}.main-grid{grid-template-columns:1fr}.side-card{position:static;order:2}.form-card{padding:22px}.top-tag{display:none}}
+@media(max-width:540px){.topbar{height:66px;padding:0 17px}.brand{font-size:19px}.shell{padding:0 12px;margin-top:8px}.hero{border-radius:21px;padding:25px 22px;min-height:0}.hero-art{display:none}.hero h1{font-size:28px}.hero p{font-size:12px}.main-grid{margin-top:13px;gap:13px}.form-card{padding:19px 16px;min-height:0;border-radius:20px}.slide h2{font-size:21px}.field-grid,.options{grid-template-columns:1fr}.field.full{grid-column:auto}.actions{margin-top:22px}.btn{padding:12px 17px;font-size:13px}.side-card{border-radius:20px}.tracking{font-size:21px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="mark" aria-hidden="true"></span><span>PLAST <span style="color:#18a960">SHOW</span></span></div>
+  <div class="top-tag">فرم تعاملی ثبت‌نام بازدیدکنندگان</div>
+</header>
+
+<main class="shell">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span> صنعت پلاستیک، فرصت‌های تازه</div>
+      <h1>به دنیای <span>PLAST SHOW</span><br>خوش آمدید</h1>
+      <p>برای ثبت درخواست بازدید و شناسایی زمینه‌های همکاری تجاری، چند سؤال کوتاه را پاسخ دهید. تکمیل فرم فقط چند دقیقه زمان می‌برد.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="orbit"></div><div class="orbit two"></div><div class="cube"></div><i class="spark s1"></i><i class="spark s2"></i><i class="spark s3"></i></div>
+  </section>
+
+  <div class="main-grid">
+    <section class="form-card" aria-label="فرم ثبت‌نام">
+      <div id="formArea">
+        <div class="progress-head"><span class="progress-label">فرم ثبت‌نام مرحله‌ای</span><span class="step-count" id="stepCount">مرحله ۱ از ۵</span></div>
+        <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+        <form id="plastForm" novalidate>
+          <section class="slide active" data-step="0">
+            <h2>از خودتان شروع کنیم 👋</h2>
+            <p class="subtitle">اطلاعات تماس را وارد کنید تا درخواست بازدیدتان ثبت شود.</p>
+            <div class="field-grid">
+              <div class="field full"><label for="fullName">نام و نام خانوادگی *</label><input id="fullName" name="fullName" autocomplete="name" placeholder="مثلاً علی رضایی" required></div>
+              <div class="field full"><label for="mobile">شماره موبایل *</label><input id="mobile" name="mobile" inputmode="tel" autocomplete="tel" placeholder="مثلاً ۰۹۱۲۱۲۳۴۵۶۷" required></div>
+              <div class="field full"><label for="email">ایمیل (اختیاری)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com"></div>
+            </div>
+            <p class="note">فیلدهای ستاره‌دار الزامی هستند. لطفاً اطلاعات را با دقت وارد کنید.</p>
+          </section>
+
+          <section class="slide" data-step="1">
+            <h2>درباره فعالیت شما 🏭</h2>
+            <p class="subtitle">با چند انتخاب کوتاه، بهتر با حوزه کاری شما آشنا می‌شویم.</p>
+            <div class="field-grid">
+              <div class="field full"><label for="company">نام شرکت یا مجموعه (اختیاری)</label><input id="company" name="company" placeholder="نام شرکت یا کسب‌وکار"></div>
+              <div class="field"><label for="role">سمت شغلی</label><select id="role" name="role"><option value="">انتخاب کنید</option><option>مدیرعامل / مالک</option><option>مدیر فروش یا بازرگانی</option><option>مسئول خرید</option><option>کارشناس</option><option>مهندس / مسئول فنی</option><option>دانشجو</option><option>سایر</option></select></div>
+              <div class="field"><label for="city">شهر محل فعالیت (اختیاری)</label><input id="city" name="city" placeholder="مثلاً تهران"></div>
+            </div>
+            <div class="question" style="margin-top:22px"><div class="question-label">حوزه فعالیت شما کدام است؟ *</div>
+              <div class="options">
+                <div class="option"><input type="radio" id="industry1" name="industry" value="تولید محصولات پلاستیکی" required><label for="industry1">تولید محصولات پلاستیکی</label></div>
+                <div class="option"><input type="radio" id="industry2" name="industry" value="مواد اولیه پلیمری"><label for="industry2">مواد اولیه پلیمری</label></div>
+                <div class="option"><input type="radio" id="industry3" name="industry" value="ماشین‌آلات و تجهیزات"><label for="industry3">ماشین‌آلات و تجهیزات</label></div>
+                <div class="option"><input type="radio" id="industry4" name="industry" value="بسته‌بندی"><label for="industry4">بسته‌بندی</label></div>
+                <div class="option"><input type="radio" id="industry5" name="industry" value="بازیافت پلاستیک"><label for="industry5">بازیافت پلاستیک</label></div>
+                <div class="option"><input type="radio" id="industry6" name="industry" value="بازرگانی و سایر"><label for="industry6">بازرگانی / سایر</label></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-step="2">
+            <h2>چه چیزی برایتان جذاب است؟ ✨</h2>
+            <p class="subtitle">علاقه‌مندی‌هایتان را انتخاب کنید. می‌توانید بیش از یک مورد را علامت بزنید.</p>
+            <div class="question"><div class="question-label">به کدام محصولات یا بخش‌ها علاقه دارید؟ *</div>
+              <div class="options">
+                <div class="option"><input type="checkbox" id="interest1" name="interest" value="مواد اولیه پلیمری"><label for="interest1">مواد اولیه پلیمری</label></div>
+                <div class="option"><input type="checkbox" id="interest2" name="interest" value="ماشین‌آلات تولید"><label for="interest2">ماشین‌آلات تولید</label></div>
+                <div class="option"><input type="checkbox" id="interest3" name="interest" value="قالب و تجهیزات"><label for="interest3">قالب و تجهیزات</label></div>
+                <div class="option"><input type="checkbox" id="interest4" name="interest" value="بسته‌بندی"><label for="interest4">بسته‌بندی</label></div>
+                <div class="option"><input type="checkbox" id="interest5" name="interest" value="بازیافت"><label for="interest5">بازیافت پلاستیک</label></div>
+                <div class="option"><input type="checkbox" id="interest6" name="interest" value="محصولات نهایی"><label for="interest6">محصولات نهایی</label></div>
+              </div>
+            </div>
+            <div class="question"><div class="question-label">هدف اصلی شما از بازدید چیست؟ *</div>
+              <div class="options">
+                <div class="option"><input type="radio" id="goal1" name="goal" value="خرید و تأمین محصول" required><label for="goal1">خرید و تأمین محصول</label></div>
+                <div class="option"><input type="radio" id="goal2" name="goal" value="پیدا کردن تأمین‌کننده"><label for="goal2">پیدا کردن تأمین‌کننده</label></div>
+                <div class="option"><input type="radio" id="goal3" name="goal" value="مذاکره و همکاری تجاری"><label for="goal3">مذاکره و همکاری تجاری</label></div>
+                <div class="option"><input type="radio" id="goal4" name="goal" value="آشنایی با فناوری‌های جدید"><label for="goal4">آشنایی با فناوری‌های جدید</label></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-step="3">
+            <h2>برنامه همکاری شما 🤝</h2>
+            <p class="subtitle">این پاسخ‌ها به درک بهتر نیازهای بازدیدکنندگان تجاری کمک می‌کند.</p>
+            <div class="question"><div class="question-label">آیا قصد خرید محصول یا تجهیزات دارید؟ *</div>
+              <div class="options">
+                <div class="option"><input type="radio" id="buy1" name="buying" value="بله، در آینده نزدیک" required><label for="buy1">بله، در آینده نزدیک</label></div>
+                <div class="option"><input type="radio" id="buy2" name="buying" value="بله، در آینده"><label for="buy2">بله، در آینده</label></div>
+                <div class="option"><input type="radio" id="buy3" name="buying" value="فعلاً در حال بررسی هستم"><label for="buy3">فعلاً در حال بررسی هستم</label></div>
+                <div class="option"><input type="radio" id="buy4" name="buying" value="خیر"><label for="buy4">خیر</label></div>
+              </div>
+            </div>
+            <div class="question"><div class="question-label">آیا به همکاری تجاری با شرکت‌های حاضر علاقه دارید؟ *</div>
+              <div class="options">
+                <div class="option"><input type="radio" id="coop1" name="cooperation" value="بله" required><label for="coop1">بله، علاقه‌مندم</label></div>
+                <div class="option"><input type="radio" id="coop2" name="cooperation" value="نیاز به اطلاعات بیشتر دارم"><label for="coop2">نیاز به اطلاعات بیشتر دارم</label></div>
+                <div class="option"><input type="radio" id="coop3" name="cooperation" value="خیر"><label for="coop3">فعلاً خیر</label></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide" data-step="4">
+            <h2>مرور و تأیید نهایی ✅</h2>
+            <p class="subtitle">پیش از دریافت کد پیگیری، اطلاعات واردشده را مرور کنید.</p>
+            <div id="summary" style="background:#f6f9fd;border:1px solid #e3ebf5;border-radius:16px;padding:17px;line-height:2.2;font-size:13px"></div>
+            <div class="question" style="margin-top:20px"><div class="option"><input type="checkbox" id="consent" required><label for="consent">تأیید می‌کنم اطلاعات واردشده صحیح است و با استفاده از آن‌ها برای همین درخواست موافقم.</label></div></div>
+            <p class="note">این نسخه آزمایشی است و اطلاعات را به سرور یا پنل مدیریتی ارسال و ذخیره نمی‌کند.</p>
+          </section>
+
+          <div class="actions" id="actions">
+            <button type="button" class="btn btn-ghost" id="backBtn" disabled>مرحله قبل</button>
+            <button type="button" class="btn btn-primary" id="nextBtn">شروع و ادامه ←</button>
+          </div>
+        </form>
+      </div>
+      <div class="success" id="success">
+        <div class="success-icon">✓</div>
+        <h2>درخواست شما آماده شد!</h2>
+        <p>کد پیگیری نمایشی شما ایجاد شد. آن را برای مراجعه دوباره یادداشت کنید.</p>
+        <div class="tracking" id="trackingCode">PS-000000</div>
+        <button class="btn btn-primary" id="copyBtn" type="button">کپی کد پیگیری</button>
+        <p class="warning">توجه: در این نسخه اطلاعات و کد پیگیری در سامانه‌ای ذخیره نمی‌شوند. با بستن یا تازه‌سازی صفحه ممکن است امکان بازیابی آن‌ها را نداشته باشید.</p>
+        <button class="btn btn-ghost" id="restartBtn" type="button">شروع فرم جدید</button>
+      </div>
+    </section>
+
+    <aside class="side-card">
+      <h3 class="side-title">چرا در فرم پلاست شو شرکت کنید؟</h3>
+      <div class="info-row"><div class="icon">↗</div><div><strong>فرصت‌های تجاری</strong><span>مشخص کردن هدف بازدید و زمینه‌های همکاری احتمالی</span></div></div>
+      <div class="info-row"><div class="icon">◇</div><div><strong>ارتباط با صنعت</strong><span>دسته‌بندی علاقه‌مندی‌ها در زنجیره صنعت پلاستیک</span></div></div>
+      <div class="info-row"><div class="icon">✓</div><div><strong>فرم سریع و ساده</strong><span>مراحل کوتاه، نوار پیشرفت و امکان بازگشت برای اصلاح پاسخ‌ها</span></div></div>
+      <div class="side-banner"><b>یادآوری:</b> تاریخ، محل و جزئیات برگزاری را پس از تأیید رسمی برگزارکننده می‌توان به این صفحه اضافه کرد.</div>
+    </aside>
+  </div>
+  <footer class="footer">PLAST SHOW · فرم نمونه ثبت درخواست بازدید<br>این صفحه نمونه اولیه است و هنوز به سامانه ثبت‌نام رسمی متصل نیست.</footer>
+</main>
+<script>
+(() => {
+ const form = document.getElementById('plastForm');
+ const slides = [...document.querySelectorAll('.slide')];
+ const back = document.getElementById('backBtn');
+ const next = document.getElementById('nextBtn');
+ const progress = document.getElementById('progressBar');
+ const count = document.getElementById('stepCount');
+ const formArea = document.getElementById('formArea');
+ const success = document.getElementById('success');
+ let step = 0;
+ function showStep(n) {
+   step = n;
+   slides.forEach((s,i)=>s.classList.toggle('active', i===step));
+   progress.style.width = ((step+1)/slides.length*100)+'%';
+   count.textContent = `مرحله ${step+1} از ${slides.length}`;
+   back.disabled = step===0;
+   next.textContent = step===slides.length-1 ? 'تأیید و دریافت کد ✓' : (step===0 ? 'شروع و ادامه ←' : 'مرحله بعد ←');
+   if(step===slides.length-1) updateSummary();
+ }
+ function validateCurrent() {
+   const active = slides[step];
+   if(step===0) {
+     const name = document.getElementById('fullName');
+     const mobile = document.getElementById('mobile');
+     const digits = mobile.value.replace(/[^\d۰-۹٠-٩]/g,'');
+     if(!name.value.trim()){name.focus();name.reportValidity?.();alert('لطفاً نام و نام خانوادگی را وارد کنید.');return false;}
+     if(digits.length < 10){mobile.focus();alert('لطفاً شماره موبایل معتبر وارد کنید.');return false;}
+     const email = document.getElementById('email');
+     if(email.value && !email.checkValidity()){email.focus();alert('لطفاً ایمیل را بررسی کنید.');return false;}
+   }
+   if(step===1 && !form.querySelector('input[name="industry"]:checked')){alert('لطفاً حوزه فعالیت خود را انتخاب کنید.');return false;}
+   if(step===2) {
+     if(!form.querySelector('input[name="interest"]:checked')){alert('لطفاً حداقل یک حوزه علاقه‌مندی انتخاب کنید.');return false;}
+     if(!form.querySelector('input[name="goal"]:checked')){alert('لطفاً هدف اصلی بازدید را انتخاب کنید.');return false;}
+   }
+   if(step===3 && (!form.querySelector('input[name="buying"]:checked') || !form.querySelector('input[name="cooperation"]:checked'))){alert('لطفاً به هر دو سؤال پاسخ دهید.');return false;}
+   if(step===4 && !document.getElementById('consent').checked){alert('برای ادامه، لطفاً صحت اطلاعات را تأیید کنید.');return false;}
+   return true;
+ }
+ function val(name){const el=form.elements[name];if(!el)return '—'; if(el instanceof RadioNodeList)return el.value||'—';return el.value||'—';}
+ function updateSummary(){
+   const interests=[...form.querySelectorAll('input[name="interest"]:checked')].map(x=>x.value).join('، ')||'—';
+   const rows=[
+    ['نام',val('fullName')],['موبایل',val('mobile')],['شرکت',val('company')],['سمت',val('role')],['حوزه فعالیت',val('industry')],['علاقه‌مندی‌ها',interests],['هدف بازدید',val('goal')],['قصد خرید',val('buying')],['همکاری تجاری',val('cooperation')]
+   ];
+   document.getElementById('summary').innerHTML=rows.map(([k,v])=>`<div><b>${escapeHtml(k)}:</b> ${escapeHtml(v)}</div>`).join('');
+ }
+ function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+ next.addEventListener('click',()=>{
+   if(!validateCurrent())return;
+   if(step<slides.length-1){showStep(step+1);return;}
+   const code='PS-'+Math.random().toString(36).slice(2,5).toUpperCase()+'-'+Math.floor(1000+Math.random()*9000);
+   document.getElementById('trackingCode').textContent=code;
+   formArea.style.display='none';success.classList.add('show');
+ });
+ back.addEventListener('click',()=>{if(step>0)showStep(step-1)});
+ document.getElementById('copyBtn').addEventListener('click',async()=>{
+   const code=document.getElementById('trackingCode').textContent;
+   try{await navigator.clipboard.writeText(code);document.getElementById('copyBtn').textContent='کپی شد ✓';}
+   catch(e){alert('کد پیگیری شما: '+code);}
+ });
+ document.getElementById('restartBtn').addEventListener('click',()=>{form.reset();step=0;success.classList.remove('show');formArea.style.display='block';showStep(0);});
+ showStep(0);
+})();
+</script>
+</body>
+</html>
